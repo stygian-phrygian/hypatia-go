@@ -15,9 +15,10 @@ func LoadSample(startTime float64, sampleSlot int, fileName string) string {
 // triggers playback of a part with optional note pitch offset
 // where noteOffset of 0 => no change, N => part's pitch + N semitones
 // NB. duration should probably be > 0, lest it will be indefinite (according to csound score syntax)
-// and indefinite instruments (currently) are not desirable given how the system is structured
-func PlayPart(startTime, duration float64, partNumber, noteOffset int) string {
-	return fmt.Sprintf("i \"PlayPart\" %f %f %d %d\n",
+// and indefinite instruments (currently) have no easy means of canceling them (without canceling
+// every other playing part)
+func PlayPart(startTime, duration float64, partNumber int, noteOffset float64) string {
+	return fmt.Sprintf("i \"PlayPart\" %f %f %d %f\n",
 		startTime, duration, partNumber, noteOffset)
 }
 
@@ -74,7 +75,7 @@ func StopRecording(startTime float64) string {
 }
 
 // return csound score data which
-// sets parts
+// sets part parameters
 
 func SetPartSample(startTime, partNumber, v float64) string {
 	return fmt.Sprintf("i \"SetPartSample\" %f 1 %.f %f\n",
@@ -162,7 +163,7 @@ func SetPartEnv1Depth(startTime, partNumber, v float64) string {
 }
 
 // return csound score data which
-// sets fxsends
+// sets fxsend parameters
 
 func SetFXSendEQGainLow(startTime, fxSendNumber, v float64) string {
 	return fmt.Sprintf("i \"SetFXSendEQGainLow\" %f 1 %.f %f\n",
@@ -274,7 +275,7 @@ func SetFXSendGain(startTime, fxSendNumber, v float64) string {
 }
 
 // return csound score data which
-// sets master
+// sets master parameters
 
 func SetMasterEQGainLow(startTime, v float64) string {
 	return fmt.Sprintf("i \"SetMasterEQGainLow\" %f 1 %f\n", startTime, v)
