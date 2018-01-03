@@ -1,5 +1,7 @@
 package hypatia
 
+//go:generate go-bindata -pkg hypatia -o assets.go main.csd
+
 import (
 	"io"
 	"os"

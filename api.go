@@ -77,200 +77,200 @@ func StopRecording(startTime float64) string {
 // return csound score data which
 // sets part parameters
 
-func SetPartSample(startTime, partNumber, v float64) string {
-	return fmt.Sprintf("i \"SetPartSample\" %f 1 %.f %f\n",
+func SetPartSample(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartSample\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
-func SetPartPitch(startTime, partNumber, v float64) string {
-	return fmt.Sprintf("i \"SetPartPitch\" %f 1 %.f %f\n",
+func SetPartPitch(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartPitch\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
-func SetPartAmp(startTime, partNumber, v float64) string {
-	return fmt.Sprintf("i \"SetPartAmp\" %f 1 %.f %f\n",
+func SetPartAmp(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartAmp\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
-func SetPartSampleOffset(startTime, partNumber, v float64) string {
-	return fmt.Sprintf("i \"SetPartSampleOffset\"  % 1f %f %f\n",
+func SetPartSampleOffset(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartSampleOffset\"  % 1f %d%f\n",
 		startTime, partNumber, v)
 }
-func SetPartFilterCutoff(startTime, partNumber, v float64) string {
-	return fmt.Sprintf("i \"SetPartFilterCutoff\"  % 1f %f %f\n",
+func SetPartFilterCutoff(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartFilterCutoff\"  % 1f %d%f\n",
 		startTime, partNumber, v)
 }
-func SetPartFilterResonance(startTime, partNumber, v float64) string {
-	return fmt.Sprintf("i \"SetPartFilterResonance\" %f 1 %.f %f\n",
+func SetPartFilterResonance(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartFilterResonance\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
-func SetPartFilterType(startTime, partNumber, v float64) string {
-	return fmt.Sprintf("i \"SetPartFilterType\" %f 1 %.f %f\n",
+func SetPartFilterType(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartFilterType\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
-func SetPartDistortion(startTime, partNumber, v float64) string {
-	return fmt.Sprintf("i \"SetPartDistortion\" %f 1 %.f %f\n",
+func SetPartDistortion(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartDistortion\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
-func SetPartPan(startTime, partNumber, v float64) string {
-	return fmt.Sprintf("i \"SetPartPan\" %f 1 %.f %f\n",
+func SetPartPan(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartPan\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
-func SetPartTimestretchFactor(startTime, partNumber, v float64) string {
-	return fmt.Sprintf("i \"SetPartTimestretchFactor\" %f 1 %.f %f\n",
+func SetPartTimestretchFactor(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartTimestretchFactor\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
-func SetPartTimestretchWindowSize(startTime, partNumber, v float64) string {
-	return fmt.Sprintf("i \"SetPartTimestretchWindowSize\" %f 1 %.f %f\n",
+func SetPartTimestretchWindowSize(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartTimestretchWindowSize\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
-func SetPartReverse(startTime, partNumber, v float64) string {
-	return fmt.Sprintf("i \"SetPartReverse\" %f 1 %.f %f\n",
+func SetPartReverse(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartReverse\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
-func SetPartSendDestination(startTime, partNumber, v float64) string {
-	return fmt.Sprintf("i \"SetPartSendDestination\" %f 1 %.f %f\n",
+func SetPartSendDestination(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartSendDestination\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
-func SetPartSendWet(startTime, partNumber, v float64) string {
-	return fmt.Sprintf("i \"SetPartSendWet\" %f 1 %.f %f\n",
+func SetPartSendWet(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartSendWet\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
-func SetPartAmpAttack(startTime, partNumber, v float64) string {
-	return fmt.Sprintf("i \"SetPartAmpAttack\" %f 1 %.f %f\n",
+func SetPartAmpAttack(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartAmpAttack\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
-func SetPartAmpDecay(startTime, partNumber, v float64) string {
-	return fmt.Sprintf("i \"SetPartAmpDecay\" %f 1 %.f %f\n",
+func SetPartAmpDecay(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartAmpDecay\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
-func SetPartAmpSustain(startTime, partNumber, v float64) string {
-	return fmt.Sprintf("i \"SetPartAmpSustain\" %f 1 %.f %f\n",
+func SetPartAmpSustain(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartAmpSustain\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
-func SetPartAmpRelease(startTime, partNumber, v float64) string {
-	return fmt.Sprintf("i \"SetPartAmpRelease\" %f 1 %.f %f\n",
+func SetPartAmpRelease(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartAmpRelease\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
-func SetPartEnv1Attack(startTime, partNumber, v float64) string {
-	return fmt.Sprintf("i \"SetPartEnv1Attack\" %f 1 %.f %f\n",
+func SetPartEnv1Attack(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartEnv1Attack\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
-func SetPartEnv1Decay(startTime, partNumber, v float64) string {
-	return fmt.Sprintf("i \"SetPartEnv1Decay\" %f 1 %.f %f\n",
+func SetPartEnv1Decay(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartEnv1Decay\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
-func SetPartEnv1Depth(startTime, partNumber, v float64) string {
-	return fmt.Sprintf("i \"SetPartEnv1Depth\" %f 1 %.f %f\n",
+func SetPartEnv1Depth(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartEnv1Depth\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
 
 // return csound score data which
 // sets fxsend parameters
 
-func SetFXSendEQGainLow(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendEQGainLow\" %f 1 %.f %f\n",
+func SetFXSendEQGainLow(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendEQGainLow\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendEQGainMid(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendEQGainMid\" %f 1 %.f %f\n",
+func SetFXSendEQGainMid(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendEQGainMid\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendEQGainHigh(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendEQGainHigh\" %f 1 %.f %f\n",
+func SetFXSendEQGainHigh(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendEQGainHigh\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendEQLowCornerFrequency(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendEQLowCornerFrequency\" %f 1 %.f %f\n",
+func SetFXSendEQLowCornerFrequency(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendEQLowCornerFrequency\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendEQMidPeakingFrequency(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendEQMidPeakingFrequency\" %f 1 %.f %f\n",
+func SetFXSendEQMidPeakingFrequency(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendEQMidPeakingFrequency\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendEQHighCornerFrequency(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendEQHighCornerFrequency\" %f 1 %.f %f\n",
+func SetFXSendEQHighCornerFrequency(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendEQHighCornerFrequency\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendChorusDelayTime(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendChorusDelayTime\" %f 1 %.f %f\n",
+func SetFXSendChorusDelayTime(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendChorusDelayTime\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendChordDepth(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendChordDepth\" %f 1 %.f %f\n",
+func SetFXSendChordDepth(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendChordDepth\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendChorusRate(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendChorusRate\" %f 1 %.f %f\n",
+func SetFXSendChorusRate(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendChorusRate\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendChorusFeedback(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendChorusFeedback\" %f 1 %.f %f\n",
+func SetFXSendChorusFeedback(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendChorusFeedback\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendChorusWet(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendChorusWet\" %f 1 %.f %f\n",
+func SetFXSendChorusWet(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendChorusWet\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendDelayLeftTime(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendDelayLeftTime\" %f 1 %.f %f\n",
+func SetFXSendDelayLeftTime(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendDelayLeftTime\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendDelayLeftFeedback(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendDelayLeftFeedback\" %f 1 %.f %f\n",
+func SetFXSendDelayLeftFeedback(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendDelayLeftFeedback\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendDelayRightTime(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendDelayRightTime\" %f 1 %.f %f\n",
+func SetFXSendDelayRightTime(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendDelayRightTime\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendDelayRightFeedback(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendDelayRightFeedback\" %f 1 %.f %f\n",
+func SetFXSendDelayRightFeedback(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendDelayRightFeedback\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendDelayWet(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendDelayWet\" %f 1 %.f %f\n",
+func SetFXSendDelayWet(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendDelayWet\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendRingModFrequency(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendRingModFrequency\" %f 1 %.f %f\n",
+func SetFXSendRingModFrequency(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendRingModFrequency\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendReverbRoomSize(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendReverbRoomSize\" %f 1 %.f %f\n",
+func SetFXSendReverbRoomSize(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendReverbRoomSize\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendReverbDamping(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendReverbDamping\" %f 1 %.f %f\n",
+func SetFXSendReverbDamping(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendReverbDamping\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendReverbWet(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendReverbWet\" %f 1 %.f %f\n",
+func SetFXSendReverbWet(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendReverbWet\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendBitReduction(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendBitReduction\" %f 1 %.f %f\n",
+func SetFXSendBitReduction(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendBitReduction\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendCompressorRatio(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendCompressorRatio\" %f 1 %.f %f\n",
+func SetFXSendCompressorRatio(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendCompressorRatio\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendCompressorThreshold(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendCompressorThreshold\" %f 1 %.f %f\n",
+func SetFXSendCompressorThreshold(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendCompressorThreshold\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendCompressorAttack(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendCompressorAttack\" %f 1 %.f %f\n",
+func SetFXSendCompressorAttack(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendCompressorAttack\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendCompressorRelease(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendCompressorRelease\" %f 1 %.f %f\n",
+func SetFXSendCompressorRelease(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendCompressorRelease\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendCompressorGain(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendCompressorGain\" %f 1 %.f %f\n",
+func SetFXSendCompressorGain(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendCompressorGain\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendGain(startTime, fxSendNumber, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendGain\" %f 1 %.f %f\n",
+func SetFXSendGain(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendGain\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
 
