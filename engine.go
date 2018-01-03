@@ -1,11 +1,12 @@
 package hypatia
 
 import (
+	"io"
 	"os"
 	"os/exec"
 	"strings"
 
-	"github.com/hypebeast/go-osc/osc"
+	// "github.com/hypebeast/go-osc/osc"
 	"github.com/spf13/viper"
 )
 
@@ -17,7 +18,7 @@ const (
 
 // the running csound instance and an OSC client into it
 type Engine struct {
-	OSCClient *osc.Client
+	stdinPipe io.WriteCloser
 	Command   *exec.Cmd
 }
 
@@ -40,7 +41,7 @@ func New() (*Engine, error) {
 	v.SetDefault("ksmps", "128")
 	v.SetDefault("number-of-parts", "16")
 	v.SetDefault("number-of-fx-sends", "2")
-	v.SetDefault("osc-listen-port", "8080")
+	v.SetDefault("osc-listen-port", "0") // <-- 0 means no OSC listening
 	// v.SetDefault("logfile", "null")
 	v.SetDefault("other-flags", "") // <-- option to add further csound flags
 
@@ -60,7 +61,7 @@ func New() (*Engine, error) {
 	}
 
 	// create OSC client
-	c := osc.NewClient("localhost", v.GetInt("osc-listen-port"))
+	// c := osc.NewClient("localhost", v.GetInt("osc-listen-port"))
 
 	// get the csound csd file asset
 	// create a temp file with the csound csd file asset data
@@ -71,15 +72,21 @@ func New() (*Engine, error) {
 	}
 
 	// create arguments for csound
-	args := append([]string{csoundFileName}, flags...)
+	// args := append([]string{csoundFileName}, flags...)
+	args := append([]string{csoundFileName, "-Lstdin"}, flags...)
 
 	// create the csound command
 	// which utilizes the recently created csound csd temp file and flags
 	p := exec.Command("csound", args...)
 
+	in, err := p.StdinPipe()
+	if err != nil {
+		return nil, err
+	}
+
 	// return the "engine"
 	return &Engine{
-		OSCClient: c,
+		stdinPipe: in,
 		Command:   p,
 	}, nil
 }
@@ -94,13 +101,14 @@ func (e *Engine) Start() error {
 func (e *Engine) Close() error {
 	// remove the temp csound file
 	os.Remove(csoundFileName)
+	// close stdin
+	e.stdinPipe.Close()
 	// end the csound process
 	return e.Command.Process.Kill()
 }
 
 // sends csound score data (strings) into the running csound instance
 func (e *Engine) Perform(scoreLines ...string) {
-	e.OSCClient.Send(osc.NewMessage(
-		oscAddress, // <--- magic constant (look in main.csd)
-		strings.Join(scoreLines, "")))
+	io.WriteString(e.stdinPipe,
+		strings.Join(scoreLines, ""))
 }
