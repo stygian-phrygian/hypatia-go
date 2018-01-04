@@ -193,8 +193,8 @@ func SetFXSendChorusDelayTime(startTime float64, fxSendNumber int, v float64) st
 	return fmt.Sprintf("i \"SetFXSendChorusDelayTime\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendChordDepth(startTime float64, fxSendNumber int, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendChordDepth\" %f 1 %d %f\n",
+func SetFXSendChorusDepth(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendChorusDepth\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
 func SetFXSendChorusRate(startTime float64, fxSendNumber int, v float64) string {
