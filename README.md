@@ -16,10 +16,9 @@ This ameliorates that issue.
 See `_example` directory
 
 ## What's Going On Internally
-Hypatia is just a CSound script, which listens for CSound score language on an OSC port.
+Hypatia is just a CSound script, which listens for CSound score language
 This wrapper library simplifies the usage of Hypatia by:
 * booting CSound with the Hypatia script
-* establishing an OSC communication channel seamlessly.
 * providing a golang API around Hypatia (which itself wants CSound score strings)
 
 ## Configuration
