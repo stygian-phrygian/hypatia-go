@@ -113,12 +113,16 @@ func SetPartPan(startTime float64, partNumber int, v float64) string {
 	return fmt.Sprintf("i \"SetPartPan\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
-func SetPartTimestretchFactor(startTime float64, partNumber int, v float64) string {
-	return fmt.Sprintf("i \"SetPartTimestretchFactor\" %f 1 %d %f\n",
+func SetPartLoopStart(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartLoopStart\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
-func SetPartTimestretchWindowSize(startTime float64, partNumber int, v float64) string {
-	return fmt.Sprintf("i \"SetPartTimestretchWindowSize\" %f 1 %d %f\n",
+func SetPartLoopEnd(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartLoopEnd\" %f 1 %d %f\n",
+		startTime, partNumber, v)
+}
+func SetPartLoopOn(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartLoopOn\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
 func SetPartReverse(startTime float64, partNumber int, v float64) string {
@@ -245,8 +249,8 @@ func SetFXSendReverbWet(startTime float64, fxSendNumber int, v float64) string {
 	return fmt.Sprintf("i \"SetFXSendReverbWet\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
-func SetFXSendBitReduction(startTime float64, fxSendNumber int, v float64) string {
-	return fmt.Sprintf("i \"SetFXSendBitReduction\" %f 1 %d %f\n",
+func SetFXSendDistortion(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendDistortion\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
 func SetFXSendCompressorRatio(startTime float64, fxSendNumber int, v float64) string {
@@ -263,6 +267,10 @@ func SetFXSendCompressorAttack(startTime float64, fxSendNumber int, v float64) s
 }
 func SetFXSendCompressorRelease(startTime float64, fxSendNumber int, v float64) string {
 	return fmt.Sprintf("i \"SetFXSendCompressorRelease\" %f 1 %d %f\n",
+		startTime, fxSendNumber, v)
+}
+func SetFXSendCompressorSideChain(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendCompressorSideChain\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
 func SetFXSendCompressorGain(startTime float64, fxSendNumber int, v float64) string {
@@ -304,8 +312,8 @@ func SetMasterReverbDamping(startTime, v float64) string {
 func SetMasterReverbWet(startTime, v float64) string {
 	return fmt.Sprintf("i \"SetMasterReverbWet\" %f 1 %f\n", startTime, v)
 }
-func SetMasterBitReduction(startTime, v float64) string {
-	return fmt.Sprintf("i \"SetMasterBitReduction\" %f 1 %f\n", startTime, v)
+func SetMasterDistortion(startTime, v float64) string {
+	return fmt.Sprintf("i \"SetMasterDistortion\" %f 1 %f\n", startTime, v)
 }
 func SetMasterCompressorRatio(startTime, v float64) string {
 	return fmt.Sprintf("i \"SetMasterCompressorRatio\" %f 1 %f\n", startTime, v)
