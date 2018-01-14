@@ -257,6 +257,10 @@ func SetFXSendBitDepth(startTime float64, fxSendNumber int, v float64) string {
 	return fmt.Sprintf("i \"SetFXSendBitDepth\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
+func SetFXSendSRFold(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendSRFold\" %f 1 %d %f\n",
+		startTime, fxSendNumber, v)
+}
 func SetFXSendDistortion(startTime float64, fxSendNumber int, v float64) string {
 	return fmt.Sprintf("i \"SetFXSendDistortion\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
