@@ -153,16 +153,20 @@ func SetPartAmpRelease(startTime float64, partNumber int, v float64) string {
 	return fmt.Sprintf("i \"SetPartAmpRelease\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
-func SetPartEnv1Attack(startTime float64, partNumber int, v float64) string {
-	return fmt.Sprintf("i \"SetPartEnv1Attack\" %f 1 %d %f\n",
+func SetPartModAttack(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartModAttack\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
-func SetPartEnv1Decay(startTime float64, partNumber int, v float64) string {
-	return fmt.Sprintf("i \"SetPartEnv1Decay\" %f 1 %d %f\n",
+func SetPartModDecay(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartModDecay\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
-func SetPartEnv1Depth(startTime float64, partNumber int, v float64) string {
-	return fmt.Sprintf("i \"SetPartEnv1Depth\" %f 1 %d %f\n",
+func SetPartModDepth(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartModDepth\" %f 1 %d %f\n",
+		startTime, partNumber, v)
+}
+func SetPartModDestination(startTime float64, partNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetPartModDestination\" %f 1 %d %f\n",
 		startTime, partNumber, v)
 }
 
@@ -247,6 +251,10 @@ func SetFXSendReverbDamping(startTime float64, fxSendNumber int, v float64) stri
 }
 func SetFXSendReverbWet(startTime float64, fxSendNumber int, v float64) string {
 	return fmt.Sprintf("i \"SetFXSendReverbWet\" %f 1 %d %f\n",
+		startTime, fxSendNumber, v)
+}
+func SetFXSendBitDepth(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendBitDepth\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
 func SetFXSendDistortion(startTime float64, fxSendNumber int, v float64) string {
