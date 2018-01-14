@@ -241,6 +241,10 @@ func SetFXSendRingModFrequency(startTime float64, fxSendNumber int, v float64) s
 	return fmt.Sprintf("i \"SetFXSendRingModFrequency\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
 }
+func SetFXSendRingModDepth(startTime float64, fxSendNumber int, v float64) string {
+	return fmt.Sprintf("i \"SetFXSendRingModDepth\" %f 1 %d %f\n",
+		startTime, fxSendNumber, v)
+}
 func SetFXSendReverbRoomSize(startTime float64, fxSendNumber int, v float64) string {
 	return fmt.Sprintf("i \"SetFXSendReverbRoomSize\" %f 1 %d %f\n",
 		startTime, fxSendNumber, v)
