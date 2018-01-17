@@ -60,8 +60,6 @@ func main() {
 		// set parts to sample slots
 		h.SetPartSample(startTime, bassPart, 1),
 		h.SetPartSample(startTime, synthPart, 2),
-		// change bass part's parameters
-		h.SetPartAmp(startTime, bassPart, 0.7),
 		// change synth part's parameters
 		h.SetPartAmpAttack(startTime, synthPart, 0.02),
 		h.SetPartAmpDecay(startTime, synthPart, 0.1),
