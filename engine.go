@@ -3,13 +3,11 @@ package hypatia
 //go:generate go-bindata -pkg hypatia -o assets.go main.csd
 
 import (
+	"github.com/spf13/viper"
 	"io"
 	"os"
 	"os/exec"
 	"strings"
-
-	// "github.com/hypebeast/go-osc/osc"
-	"github.com/spf13/viper"
 )
 
 const (
