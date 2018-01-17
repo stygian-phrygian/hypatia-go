@@ -90,7 +90,7 @@ func main() {
 		h.SetFXSendCompressorThreshold(startTime, fxSend2, -10),
 		h.SetFXSendCompressorAttack(startTime, fxSend2, 0.001),
 		h.SetFXSendCompressorRelease(startTime, fxSend2, 0.1),
-		h.SetFXSendCompressorGain(startTime, fxSend2, 10))
+		h.SetFXSendCompressorGain(startTime, fxSend2, 15))
 	for i := 0; i < 8; i++ {
 		d := quarterNoteDuration
 		time.Sleep(time.Duration(d))

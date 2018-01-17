@@ -1,6 +1,6 @@
 # Hypatia-Go
 Golang wrapper around the CSound based sampler, Hypatia.
-Kind of a hack.
+Kind of a hack.  Only works on unix-y systems (I guess?)
 
 ## What Is This?
 The Hypatia-Go library simplifies booting Hypatia and communicating with it.
@@ -14,6 +14,8 @@ This ameliorates that issue.
 
 ## Usage
 See `_example` directory
+
+Warning: one must (currently) run the example golang files in the _exact_ same directory they're located in.
 
 ## What's Going On Internally
 Hypatia is just a CSound script, which listens for CSound score language
@@ -41,7 +43,7 @@ input:              adc
 # on linux, one can list the devices with `aplay -l`
 # a specific device value would look like
 # 'dac3' or ':hw:1,1'
-# 
+#
 output:             dac
 # the sample rate (obviously enough)
 # should match the sample rate of the specified output device
@@ -58,9 +60,6 @@ osc-listen-port:    8080
 other-flags:        ""
 `
 Nota Bene, you probably *won't* need a config file as the defaults should likely work sufficiently.
-
-## API
-*TODO
 
 
 

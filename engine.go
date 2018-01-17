@@ -13,7 +13,7 @@ import (
 const (
 	configFileName = "hypatia-config.yaml"
 	csoundFileName = "main.csd"
-	oscAddress     = "/score"
+	oscAddress     = "/score" // <-- unused now
 )
 
 // the running csound instance and an OSC client into it
