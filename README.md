@@ -29,7 +29,8 @@ This file is (curiously) named `hypatia-config.yaml`.
 The configuration format is derived from csound [command line flags](http://www.csounds.com/manual/html/CommandFlags.html)(which I recommend consulting the documentation regarding).
 Here's an example configuration (which has the defaults that hypatia-go boots Hypatia with).
 The comments above each variable offer further explanation.
-`
+
+```yaml
 # the audio input device
 # default is 'adc' however one can specify a particular device
 # if multiple options are available to your system
@@ -58,7 +59,8 @@ number-of-fx-sends: 2
 osc-listen-port:    8080
 # you can pass whatever other CSound specific flags you want here
 other-flags:        ""
-`
+```
+
 Nota Bene, you probably *won't* need a config file as the defaults should likely work sufficiently.
 
 
