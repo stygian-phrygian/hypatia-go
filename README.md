@@ -15,7 +15,7 @@ This ameliorates that issue.
 ## Usage
 See `_example` directory
 
-Warning: one must (currently) run the example golang files in the _exact_ same directory they're located in.
+Warning: one must (currently) run the example golang files in the _exact_ same directory that they're located in.
 
 ## What's Going On Internally
 Hypatia is just a CSound script, which listens for CSound score language
