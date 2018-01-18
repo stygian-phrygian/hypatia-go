@@ -46,6 +46,9 @@ func main() {
 	bpm := 120.0
 	quarterNoteDuration := time.Duration(float64(time.Second) * (60.0 / bpm))
 
+	// find where sample directory is located (relative to GOPATH)
+	sampleDirectory := os.Getenv("GOPATH") + "src/github.com/stygian-phrygian/hypatia-go/_example/samples/"
+
 	// load samples and set parts to the samples
 	// also turn on sends and set reverb/delay on them
 	part1 := 1
@@ -55,8 +58,8 @@ func main() {
 	startTime := 0.0
 	engine.Perform(
 		// load samples at sample slots
-		h.LoadSample(startTime, 1, "../samples/707kick.wav"),
-		h.LoadSample(startTime, 2, "../samples/707closedhat.wav"),
+		h.LoadSample(startTime, 1, sampleDirectory+"707kick.wav"),
+		h.LoadSample(startTime, 2, sampleDirectory+"707closedhat.wav"),
 		// set samples slots to parts
 		h.SetPartSample(startTime, part1, 1),
 		h.SetPartSample(startTime, part2, 2),

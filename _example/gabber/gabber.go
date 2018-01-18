@@ -45,20 +45,22 @@ func main() {
 	bpm := 230.0
 	quarterNoteDuration := time.Duration(float64(time.Second) * (60.0 / bpm))
 
+	// find where sample directory is located (relative to GOPATH)
+	sampleDirectory := os.Getenv("GOPATH") + "src/github.com/stygian-phrygian/hypatia-go/_example/samples/"
+
 	// load samples and set parts to the samples
 	// also turn on sends and set reverb/delay on them
 	part1 := 1
 	fxSend1 := 1
 	startTime := 0.0
 	engine.Perform(
-		h.LoadSample(startTime, 1, "../samples/909kick.wav"),
+		h.LoadSample(startTime, 1, sampleDirectory+"909kick.wav"),
 		h.SetPartSample(startTime, part1, 1),
 		h.SetPartSendDestination(startTime, part1, float64(fxSend1)),
 		h.SetPartSendWet(startTime, part1, 1),
 		h.SetFXSendBitDepth(startTime, fxSend1, 10),
-		h.SetFXSendSRFold(startTime, fxSend1, 16),
 		h.SetFXSendDistortion(startTime, fxSend1, 0.8),
-		h.SetMasterGain(startTime, -2))
+		h.SetMasterGain(startTime, -20))
 
 	quarterNoteDurationInSeconds := float64(quarterNoteDuration) / float64(time.Second)
 	maxNumberOfSteps := 16
