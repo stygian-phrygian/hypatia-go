@@ -59,8 +59,7 @@ func main() {
 		h.SetPartSendDestination(startTime, part1, float64(fxSend1)),
 		h.SetPartSendWet(startTime, part1, 1),
 		h.SetFXSendBitDepth(startTime, fxSend1, 10),
-		h.SetFXSendDistortion(startTime, fxSend1, 0.8),
-		h.SetMasterGain(startTime, -20))
+		h.SetFXSendDistortion(startTime, fxSend1, 0.8))
 
 	quarterNoteDurationInSeconds := float64(quarterNoteDuration) / float64(time.Second)
 	maxNumberOfSteps := 16
