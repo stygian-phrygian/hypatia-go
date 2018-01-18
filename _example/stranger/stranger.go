@@ -76,7 +76,7 @@ func main() {
 		h.SetFXSendChorusDepth(startTime, fxSend1, 1),
 		h.SetFXSendChorusRate(startTime, fxSend1, 0.2),
 		h.SetFXSendChorusFeedback(startTime, fxSend1, 0.1),
-		h.SetFXSendReverbRoomSize(startTime, fxSend1, 0.9),
+		h.SetFXSendReverbRoomSize(startTime, fxSend1, 0.6),
 		h.SetFXSendReverbWet(startTime, fxSend1, 1),
 		h.SetFXSendGain(startTime, fxSend1, 1.1))
 
