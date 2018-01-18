@@ -10,7 +10,7 @@ This ameliorates that issue.
 
 ## Installation
 1. [CSound](http://csound.com/download.html)
-2. Run `go get` on this repository.
+2. `go get github.com/stygian-phrygian/hypatia-go`
 
 ## Usage
 See `_example` directory
